@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".Activity.ListSearchActivity">
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/toolbar2"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/rv_barang"
+                app:layout_anchorGravity="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_barang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_barang" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

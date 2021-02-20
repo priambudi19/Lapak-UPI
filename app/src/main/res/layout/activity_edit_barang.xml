@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.EditBarangActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/toolbar2"
+
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="Nama"
+
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/et_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_below="@id/txt_nama"
+            />
+
+        <TextView
+            android:id="@+id/txt_harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="Harga"
+            android:layout_marginTop="24dp"
+            android:layout_below="@id/et_nama"
+            />
+
+        <EditText
+            android:id="@+id/et_harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_below="@id/txt_harga"
+            />
+
+        <TextView
+            android:id="@+id/txt_kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="Kategori"
+            android:layout_marginTop="24dp"
+            android:layout_below="@id/et_harga"
+
+            />
+
+        <Spinner
+            android:id="@+id/sp_kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/promp"
+            android:entries="@array/ListKategori"
+            android:layout_below="@id/txt_kategori"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="Deskripsi"
+            android:layout_marginTop="24dp"
+            android:layout_below="@id/sp_kategori"
+            android:inputType="textCapSentences"
+            />
+
+        <EditText
+            android:id="@+id/et_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_below="@id/txt_deskripsi"
+            />
+
+        <LinearLayout
+            android:id="@+id/tambahImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_deskripsi"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:id="@+id/fotoBarang"
+                android:layout_marginHorizontal="16dp"/>
+
+            <Button
+                android:id="@+id/btn_galery"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pilih Gambar"
+                android:layout_marginHorizontal="16dp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:layout_below="@id/tambahImage"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            />
+
+
+    </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

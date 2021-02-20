@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">Lapak UPI</string>
+    <string name="promp" translatable="false">Pilih Kategori</string>
+
+    <string-array name="ListKategori">
+        <item>Makanan</item>
+        <item>Minuman</item>
+        <item>Buku</item>
+        <item>Elektronik</item>
+        <item>Pakaian</item>
+        <item>Lainnya</item>
+    </string-array>
+</resources>

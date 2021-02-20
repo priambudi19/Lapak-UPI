@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_barang"
+                android:layout_width="150dp"
+                android:layout_height="220dp"
+                android:layout_marginBottom="4dp"
+                android:scaleType="centerCrop"
+                tools:src="@color/colorAccent" />
+
+
+            <TextView
+                android:id="@+id/txt_namabarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toEndOf="@id/img_barang"
+                android:layout_toRightOf="@id/img_barang"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Nama Barang" />
+
+            <LinearLayout
+                android:id="@+id/li_harga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_namabarang"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toEndOf="@id/img_barang"
+                android:layout_toRightOf="@id/img_barang"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="Rp. " />
+
+                <TextView
+                    android:id="@+id/txt_hargabarang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="10000" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_deskripsibarang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/li_harga"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toEndOf="@id/img_barang"
+                android:layout_toRightOf="@id/img_barang"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:text="Deskripsi" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
